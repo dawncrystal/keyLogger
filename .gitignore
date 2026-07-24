@@ -1,0 +1,19 @@
+# Keylogger log files
+keylog.txt
+*.txt
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment
+venv/
+env/
+ENV/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
